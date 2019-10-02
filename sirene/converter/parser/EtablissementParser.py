@@ -2,7 +2,7 @@ import csv
 import os
 from collections import namedtuple
 from rdflib import Graph, URIRef, Literal, Namespace
-from rdflib.namespace import RDF, FOAF, DC, SKOS
+from rdflib.namespace import RDF, OWL, FOAF, DC, SKOS
 
 ADMS = Namespace('http://www.w3.org/ns/adms#')
 EBG = Namespace('http://data.businessgraph.io/ontology#')
@@ -18,6 +18,7 @@ entitiesPerFile = 1e5 # 100k
 def createGraph():
   g = Graph()
   g.bind('rdf', RDF)
+  g.bind('owl', OWL)
   g.bind('foaf', FOAF)
   g.bind('dc', DC)
   g.bind('skos', SKOS)
@@ -140,6 +141,9 @@ def processFile(inputPath):
       # Link between legal unit and establishment
       g.add( (URIRef(f'{baseURI}siren/{row.siren}'), ORG.hasRegisteredOrganization, subj) )
       g.add( (subj, ORG.siteOf, URIRef(f'{baseURI}siren/{row.siren}')) )
+
+      # SameAs link with entreprise.data.gouv.fr
+      g.add( (subj, OWL.sameAs, URIRef(f'https://entreprise.data.gouv.fr/etablissement/{row.siret}')) )
 
       # 'sirene' properties
       for p in [
