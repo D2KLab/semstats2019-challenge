@@ -1,0 +1,9 @@
+data
+
+# Python
+__pyache__/
+*.py[cod]
+.env
+.venv
+env/
+venv/
