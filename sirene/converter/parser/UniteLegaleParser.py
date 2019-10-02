@@ -1,4 +1,5 @@
 import csv
+import os
 from collections import namedtuple
 from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, FOAF, DC, SKOS
@@ -27,8 +28,10 @@ def createGraph():
   g.bind('sirene', SIRENE)
   return g
 
-def run():
-  with open('data/StockUniteLegale_utf8.csv') as csv_file:
+def processFile(inputPath):
+  outputBaseName = os.path.splitext(os.path.basename(inputPath))[0]
+
+  with open(inputPath) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     UniteLegale = namedtuple('UniteLegale', next(csv_reader))
     g = createGraph()
@@ -112,14 +115,17 @@ def run():
 
       i += 1
       if i % entitiesPerFile == 0:
-       g.serialize(destination=f'data/StockUniteLegale-{fileIndex}.ttl', format='turtle')
+       g.serialize(destination=os.path.join('data', f'{outputBaseName}_{fileIndex}.ttl'), format='turtle')
        fileIndex += 1
        g = createGraph()
 
 
     # Write remaining triples to graph
     if len(g) > 0:
-      g.serialize(destination=f'data/StockUniteLegale-{fileIndex}.ttl', format='turtle')
+      g.serialize(destination=os.path.join('data', f'{outputBaseName}_{fileIndex}.ttl'), format='turtle')
+
+def run():
+  processFile('data/StockUniteLegale_utf8.csv')
 
 if __name__ == '__main__':
-  run()
+  processFile('data/StockUniteLegale_utf8-extract.csv')

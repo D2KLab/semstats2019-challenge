@@ -1,4 +1,5 @@
 import csv
+import os
 from collections import namedtuple
 from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, FOAF, DC, SKOS
@@ -27,80 +28,6 @@ def createGraph():
   g.bind('schema', SCHEMA)
   g.bind('sirene', SIRENE)
   return g
-
-def run():
-  with open('data/StockEtablissement_utf8-extract.csv') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    Etablissement = namedtuple('Etablissement', next(csv_reader))
-    g = createGraph()
-    i = 0
-    fileIndex = 1
-    for row in map(Etablissement._make, csv_reader):
-      subj = URIRef(f'{baseURI}siret/{row.siret}')
-
-      # RDF type
-      g.add( (subj, RDF.type, ROV.RegisteredOrganization) )
-      g.add( (subj, RDF.type, SIRENE.UniteJuridique) )
-
-      if row.dateCreationEtablissement:
-        g.add( (subj, SCHEMA.foundingDate, Literal(row.dateCreationEtablissement)) )
-      if row.dateDebut:
-        g.add( (subj, DC.issued, Literal(row.dateDebut)) )
-      if row.dateDernierTraitementEtablissement:
-        g.add( (subj, DC.updated, Literal(row.dateDernierTraitementEtablissement)) )
-      if row.siret:
-        g.add( (subj, ROV.registration, Literal(row.siret)) )
-      if row.trancheEffectifsEtablissement:
-        g.add( (subj, SCHEMA.numberOfEmployees, Literal(row.trancheEffectifsEtablissement)) )
-
-      # Establishment address
-      parse_address(g, subj, row)
-
-      # Link between legal unit and establishment
-      g.add( (URIRef(f'{baseURI}siren/{row.siren}'), ORG.hasRegisteredOrganization, subj) )
-      g.add( (subj, ORG.siteOf, URIRef(f'{baseURI}siren/{row.siren}')) )
-
-      # 'sirene' properties
-      for p in [
-        'activitePrincipaleEtablissement',
-        'activitePrincipaleRegistreMetiersEtablissement',
-        'anneeEffectifsEtablissement',
-        'caractereEmployeurEtablissement',
-        'codeCedexEtablissement',
-        'codeCedex2Etablissement',
-        'codeCommuneEtablissement',
-        'codeCommune2Etablissement',
-        'codePaysEtrangerEtablissement',
-        'codePaysEtranger2Etablissement',
-        'codePostalEtablissement',
-        'codePostal2Etablissement',
-        'complementAdresseEtablissement',
-        'complementAdresse2Etablissement',
-        'denominationUsuelleEtablissement',
-        'distributionSpecialeEtablissement',
-        'distributionSpeciale2Etablissement',
-        'etablissementSiege',
-        'etatAdministratifEtablissement',
-        'indiceRepetitionEtablissement',
-        'indiceRepetition2Etablissement',
-        'nic',
-        'nombrePeriodesEtablissement',
-        'nomenclatureActivitePrincipaleEtablissement',
-        'statutDiffusionEtablissement'
-      ]:
-        value = getattr(row, p)
-        if value:
-          g.add( (subj, SIRENE[p], Literal(value)) )
-
-      i += 1
-      if i % entitiesPerFile == 0:
-       g.serialize(destination=f'data/StockEtablissement-{fileIndex}.ttl', format='turtle')
-       fileIndex += 1
-       g = createGraph()
-
-    # Write remaining triples to graph
-    if len(g) > 0:
-      g.serialize(destination=f'data/StockEtablissement-{fileIndex}.ttl', format='turtle')
 
 def parse_address(g, subj, row):
   address = URIRef(f'{baseURI}siret/{row.siret}/address')
@@ -180,5 +107,84 @@ def parse_address(g, subj, row):
   if not row.libellePaysEtrangerEtablissement and not row.libellePaysEtranger2Etablissement:
     g.add( (address, SCHEMA.addressCountry, Literal('France')) )
 
+def processFile(inputPath):
+  outputBaseName = os.path.splitext(os.path.basename(inputPath))[0]
+
+  with open(inputPath) as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    Etablissement = namedtuple('Etablissement', next(csv_reader))
+    g = createGraph()
+    i = 0
+    fileIndex = 1
+    for row in map(Etablissement._make, csv_reader):
+      subj = URIRef(f'{baseURI}siret/{row.siret}')
+
+      # RDF type
+      g.add( (subj, RDF.type, ROV.RegisteredOrganization) )
+      g.add( (subj, RDF.type, SIRENE.UniteJuridique) )
+
+      if row.dateCreationEtablissement:
+        g.add( (subj, SCHEMA.foundingDate, Literal(row.dateCreationEtablissement)) )
+      if row.dateDebut:
+        g.add( (subj, DC.issued, Literal(row.dateDebut)) )
+      if row.dateDernierTraitementEtablissement:
+        g.add( (subj, DC.updated, Literal(row.dateDernierTraitementEtablissement)) )
+      if row.siret:
+        g.add( (subj, ROV.registration, Literal(row.siret)) )
+      if row.trancheEffectifsEtablissement:
+        g.add( (subj, SCHEMA.numberOfEmployees, Literal(row.trancheEffectifsEtablissement)) )
+
+      # Establishment address
+      parse_address(g, subj, row)
+
+      # Link between legal unit and establishment
+      g.add( (URIRef(f'{baseURI}siren/{row.siren}'), ORG.hasRegisteredOrganization, subj) )
+      g.add( (subj, ORG.siteOf, URIRef(f'{baseURI}siren/{row.siren}')) )
+
+      # 'sirene' properties
+      for p in [
+        'activitePrincipaleEtablissement',
+        'activitePrincipaleRegistreMetiersEtablissement',
+        'anneeEffectifsEtablissement',
+        'caractereEmployeurEtablissement',
+        'codeCedexEtablissement',
+        'codeCedex2Etablissement',
+        'codeCommuneEtablissement',
+        'codeCommune2Etablissement',
+        'codePaysEtrangerEtablissement',
+        'codePaysEtranger2Etablissement',
+        'codePostalEtablissement',
+        'codePostal2Etablissement',
+        'complementAdresseEtablissement',
+        'complementAdresse2Etablissement',
+        'denominationUsuelleEtablissement',
+        'distributionSpecialeEtablissement',
+        'distributionSpeciale2Etablissement',
+        'etablissementSiege',
+        'etatAdministratifEtablissement',
+        'indiceRepetitionEtablissement',
+        'indiceRepetition2Etablissement',
+        'nic',
+        'nombrePeriodesEtablissement',
+        'nomenclatureActivitePrincipaleEtablissement',
+        'statutDiffusionEtablissement'
+      ]:
+        value = getattr(row, p)
+        if value:
+          g.add( (subj, SIRENE[p], Literal(value)) )
+
+      i += 1
+      if i % entitiesPerFile == 0:
+       g.serialize(destination=os.path.join('data', f'{outputBaseName}_{fileIndex}.ttl'), format='turtle')
+       fileIndex += 1
+       g = createGraph()
+
+    # Write remaining triples to graph
+    if len(g) > 0:
+      g.serialize(destination=os.path.join('data', f'{outputBaseName}_{fileIndex}.ttl'), format='turtle')
+
+def run():
+  processFile('data/StockEtablissement_utf8.csv')
+
 if __name__ == '__main__':
-  run()
+  processFile('data/StockEtablissement_utf8-extract.csv')
