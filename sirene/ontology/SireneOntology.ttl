@@ -1,0 +1,344 @@
+@base <http://sirene.eurecom.fr/ontology#> .
+@prefix sirene: <http://sirene.eurecom.fr/ontology#> .
+
+#################################################################
+#    External Prefixes
+#################################################################
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+#    Ontology
+#################################################################
+
+<http://sirene.eurecom.fr/ontology#> a owl:Ontology ;
+    dct:title "SIRENE ontology" ;
+    dct:created "2019-10-01"^^xsd:date ;
+    dct:modified "2019-10-01"^^xsd:date ;
+    owl:versionInfo "1.0" ;
+    vann:preferredNamespaceUri "http://sirene.eurecom.fr/ontology#" ;
+    vann:preferredNamespacePrefix "sirene" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://sirene.eurecom.fr/ontology#UniteJuridique
+sirene:UniteJuridique a owl:Class ;
+    rdfs:isDefinedBy <http://sirene.eurecom.fr/ontology#> ;
+    rdfs:label "Unité Juridique"@fr ;
+    rdfs:isDefinedBy sirene: .
+
+###  http://sirene.eurecom.fr/categorie-juridique/
+
+<http://sirene.eurecom.fr/categorie-juridique/> a skos:ConceptScheme ;
+    rdfs:label "Catégories juridiques" @fr ;
+    rdfs:comment "La nomenclature des catégories juridiques retenue dans la gestion du répertoire Sirene, répertoire officiel d'immatriculation des entreprises et des établissements, a été élaborée sous l'égide du comité interministériel Sirene.\n\nC'est une nomenclature à vocation inter-administrative, utilisée aussi dans la gestion du Registre du Commerce et des Sociétés. Elle sert de référence aux Centres de Formalités des Entreprises (CFE) pour recueillir les déclarations des entreprises."@fr ;
+    dct:created "2019-10-01"^^xsd:date ;
+    dct:modified "2019-10-01"^^xsd:date .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://sirene.eurecom.fr/ontology#identifiantAssociationUniteLegale
+
+sirene:identifiantAssociationUniteLegale a owl:ObjectProperty ;
+    rdfs:label "Numéro au Répertoire National des Associations"@fr ;
+    skos:definition "Lors de sa déclaration en préfecture, l'association reçoit automatiquement un numéro d'inscription au RNA. Elle doit en outre demander son immatriculation au répertoire Sirene lorsqu'elle souhaite demander des subventions auprès de l'État ou des collectivités territoriales, lorsqu'elle emploie des salariés ou lorsqu'elle exerce des activités qui conduisent au paiement de la TVA ou de l'impôt sur les sociétés.\n\nLe RNA est le fichier national, géré par le ministère de l'Intérieur, qui recense l'ensemble des informations sur les associations."@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#nicSiegeUniteLegale
+
+sirene:nicSiegeUniteLegale a owl:ObjectProperty ;
+    rdfs:label "Numéro interne de classement (Nic) de l'unité légale"@fr ;
+    skos:definition "Le siège d'une unité légale est le lieu où sont centralisées l'administration et la direction effective de l'unité légale.\n\nÀ un instant donné, chaque unité légale a un seul siège. Mais, au cours de la vie de l'unité légale, le siège peut être différent. Chaque siège est identifié par un numéro Nic (Numéro Interne de Classement de l'établissement) qui respecte les règles d'attribution des numéros d'établissement.\n\nLe Nic est composé de quatre chiffres et d'un cinquième qui permet de contrôler la validité du numéro Siret (concaténation du numéro Siren et du Nic)."@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#nombrePeriodesUniteLegale
+
+sirene:nombrePeriodesUniteLegale a owl:ObjectProperty ;
+    rdfs:label "Nombre de périodes de l'unité légale"@fr ;
+    skos:definition "Cette variable donne le nombre de périodes [dateDebut,dateFin] de l'unité légale. Chaque période correspond à l'intervalle de temps pendant lequel la totalité des variables historisées de l'unité légale n'ont pas été modifiées.\n\nLes dates de ces périodes sont des dates d'effet (et non des dates de traitement).\n\nLongueur : 2"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#economieSocialeSolidaireUniteLegale
+
+sirene:economieSocialeSolidaireUniteLegale a owl:ObjectProperty ;
+    rdfs:label "Appartenance au champ de l'économie sociale et solidaire"@fr ;
+    skos:definition "Cette variable indique si l'entreprise appartient au champ de l'économie sociale et solidaire. La loi n° 2014-856 du 31 juillet 2014 définit officiellement le périmètre de l'économie sociale et solidaire (ESS). Celle-ci comprend les quatre familles traditionnelles en raison de leur régime juridique (associations, fondations, coopératives et mutuelles) et inclut une nouvelle catégorie, les entreprises de l'ESS, adhérant aux mêmes principes :\n\n    poursuivre un but social autre que le seul partage des bénéfices ;\n    un caractère lucratif encadré (notamment des bénéfices majoritairement consacrés au maintien et au développement de l'activité) ;\n    une gouvernance démocratique et participative.\n\nCette variable est historisée, renseignée pour environ 1 million d'entreprises, sinon null.\n\nLongueur : 1"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#categorieEntreprise
+
+sirene:categorieEntreprise a owl:ObjectProperty ;
+    rdfs:label "Catégorie à laquelle appartient l'entreprise"@fr ;
+    skos:definition "La catégorie d'entreprise est une variable statistique et calculée par l'Insee. Ce n'est pas une variable du répertoire Sirene.\n\nDéfinition de la catégorie d'entreprise :\n\nhttps://www.insee.fr/fr/metadonnees/definition/c1057\n\nMéthodologie de calcul et diffusion de la catégorie d'entreprise :\n\nhttps://www.insee.fr/fr/information/1730869\n\nLongueur : 3"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#caractereEmployeurUniteLegale
+
+sirene:caractereEmployeurUniteLegale a owl:ObjectProperty ;
+    rdfs:label "Caractère employeur de l'unité légale"@fr ;
+    skos:definition "Lors de sa formalité de création, le déclarant indique si l'unité légale aura ou non des employés. Par la suite, le déclarant peut également faire des déclarations de prise d'emploi et de fin d'emploi. La prise en compte d'une déclaration de prise d'emploi bascule immédiatement l'unité légale en « Employeuse ». Inversement, lorsqu'une déclaration de fin d'emploi est traitée, l'unité légale devient « Non employeuse ».\n\nLe caractère employeur est O si au moins l'un des établissements actifs de l'unité légale emploie des salariés.\n\nCette variable est historisée.\n\nLongueur : 1"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#anneeEffectifsUniteLegale
+
+sirene:anneeEffectifsUniteLegale a owl:ObjectProperty ;
+    rdfs:label "Année de validité de la tranche d'effectif salarié de l'unité légale"@fr ;
+    skos:definition "Seule la dernière année de mise à jour de l'effectif salarié de l'unité légale est donnée si celle-ci est inférieure ou égale à l'année d'interrogation-3. Ainsi une interrogation en 2018 ne renverra la dernière année de mise à jour de l'effectif que si cette année est supérieure ou égale à 2015."@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#anneeCategorieEntreprise
+
+sirene:anneeCategorieEntreprise a owl:ObjectProperty ;
+    rdfs:label "Année de validité de la catégorie d'entreprise"@fr ;
+    skos:definition "Cette variable désigne l'année de validité correspondant à la catégorie d'entreprise diffusée.\n\nLongueur : 4"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#statutDiffusionUniteLegale
+
+sirene:statutDiffusionUniteLegale a owl:ObjectProperty ;
+    rdfs:label "Statut de diffusion de l'unité légale"@fr ;
+    skos:definition "Seules les unités légales diffusibles sont accessibles à tout public (statutDiffusionUniteLegale=O).\n\nLongueur : 1"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#unitePurgeeUniteLegale
+
+sirene:unitePurgeeUniteLegale a owl:ObjectProperty ;
+    rdfs:label "Unité légale purgée"@fr ;
+    skos:definition "Cette variable indique si l'unité légale a été purgée.\n\nPour des raisons de capacité de stockage des données, les données concernant les entreprises cessées avant le 31/12/2002 ont été purgées.\n\nPour ces unités cessées dites purgées :\n\n    Seules les dernières valeurs des variables de niveau Unité Légale et de niveau Etablissement sont conservées\n    En théorie, seul l'établissement siège au moment de la purge est conservé avec uniquement les dernières valeurs de cet établissement. Toutefois, pour plus de 300 unités légales purgées de la base, cette règle n'est pas respectée et ces unités ont toujours plus d'un établissement en base sans pouvoir garantir que tous les établissements ont été conservés.\n\nPlus de 4 millions d'unités légales sont purgées. Plus d'une unité purgée sur quatre a une date de création indéterminée.\n\nDiffusion des unités purgées : l'état administratif de l'unité purgée est : cessé. L'indicatrice unitePurgeeUniteLegale est présente et est égale à true.\n\nDiffusion des établissements des unités purgées : une seule période avec dateDebut=date de début de l'état fermé si cette date est renseignée, sinon dateDebut (établissement) est à null. L'état administratif de l'établissement est : fermé."@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#activitePrincipaleEtablissement
+
+sirene:activitePrincipaleEtablissement a owl:ObjectProperty ;
+    rdfs:label "Activité principale de l'établissement pendant la période"@fr ;
+    skos:definition "Lors de son inscription au répertoire, l'Insee attribue à tout établissement un code dit « APE » sur la base de la description de l'activité principale faite par le déclarant. Ce code est modifiable au cours de la vie de l'établissement en fonction des déclarations de l'exploitant.\n\nPour chaque établissement, il existe à un instant donné un seul code « APE ». Il est attribué selon la nomenclature en vigueur. La nomenclature en vigueur est la Naf Rév2 et ce depuis le 1er Janvier 2008. Chaque code comporte 2 chiffres, un point, 2 chiffres et une lettre. Tous les établissements actifs au 01/01/2008 ont eu leur code APE recodé dans la nouvelle nomenclature, ainsi de très nombreux établissements ont une période débutant à cette date.\n\nAu moment de la déclaration de l'entreprise, il peut arriver que l'Insee ne soit pas en mesure d'attribuer le bon code APE : la modalité 00.00Z peut alors être affectée provisoirement."@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#activitePrincipaleRegistreMetiersEtablissement
+
+sirene:activitePrincipaleRegistreMetiersEtablissement a owl:ObjectProperty ;
+    rdfs:label "Activité exercée par l'artisan inscrit au registre des métiers"@fr ;
+    skos:definition "Cette variable désigne le code de l'activité exercée par l'artisan inscrit au registre des métiers selon la Nomenclature d'Activités Française de l'Artisanat (NAFA).\n\nLongueur : 6"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#anneeEffectifsEtablissement
+
+sirene:anneeEffectifsEtablissement a owl:ObjectProperty ;
+    rdfs:label "Année de validité de la tranche d'effectif salarié de l'établissement"@fr ;
+    skos:definition "Seule la dernière année de mise à jour de l'effectif salarié de l'établissement est donnée si celle-ci est inférieure ou égale à l'année d'interrogation-3. Ainsi une interrogation en 2018 ne renverra la dernière année de mise à jour de l'effectif que si cette année est supérieure ou égale à 2015.\n\nLongueur : 4"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#caractereEmployeurEtablissement
+
+sirene:caractereEmployeurEtablissement a owl:ObjectProperty ;
+    rdfs:label "Caractère employeur de l'établissement"@fr ;
+    skos:definition "Lors de sa formalité d'ouverture, le déclarant indique si l'établissement aura ou non des employés. Par la suite, le déclarant peut également faire des déclarations de prise d'emploi et de fin d'emploi. La prise en compte d'une déclaration de prise d'emploi bascule immédiatement l'établissement en « employeur ».\n\nInversement, lorsqu'une déclaration de fin d'emploi est traitée, l'établissement devient « non employeur ».\n\nPour chaque établissement, il existe à un instant donné un seul code « employeur ».\n\nCette variable est historisée pour les établissements qui étaient ouverts en 2005 et pour ceux ouverts ultérieurement.\n\nLongueur : 1"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#codeCedexEtablissement
+
+sirene:codeCedexEtablissement a owl:ObjectProperty ;
+    rdfs:label "Code cedex"@fr ;
+    skos:definition "Cette variable est un élément constitutif de l'adresse.\n\nElle est facultative.\n\nLongueur : 9"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#codeCedex2Etablissement
+
+sirene:codeCedex2Etablissement a owl:ObjectProperty ;
+    rdfs:label "Code cedex de l'adresse secondaire"@fr ;
+    skos:definition "Dans le cas où l'établissement dispose d'une entrée secondaire, c'est un élément constitutif de l'adresse secondaire. Cette variable est facultative.\n\nLongueur : 9"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#codeCommuneEtablissement
+
+sirene:codeCommuneEtablissement a owl:ObjectProperty ;
+    rdfs:label "Code commune de l'établissement"@fr ;
+    skos:definition "Cette variable désigne le code de la commune de localisation de l'établissement, hors adresse à l'étranger.\n\nLe code commune correspond au code commune existant à la date de la mise à disposition : toute modification du code officiel géographique est répercutée sur la totalité des établissements (même ceux fermés) correspondant à ce code commune.\n\nPour les établissements localisés à l'étranger, la variable codeCommuneEtablissement est à null.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#codeCommune2Etablissement
+
+sirene:codeCommune2Etablissement a owl:ObjectProperty ;
+    rdfs:label "Code commune de l'adresse secondaire"@fr ;
+    skos:definition "Dans le cas où l'établissement dispose d'une entrée secondaire, cette variable désigne le code de la commune de l'adresse secondaire de l'établissement, hors adresse à l'étranger.\n\nLe code commune correspond au code commune existant à la date de la mise à disposition : toute modification du code officiel géographique est répercutée sur la totalité des établissements (même ceux fermés) correspondant à ce code commune.\n\nPour les établissements localisés à l'étranger, la variable codeCommune2Etablissement est à null.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#codePaysEtrangerEtablissement
+
+sirene:codePaysEtrangerEtablissement a owl:ObjectProperty ;
+    rdfs:label "Code pays de l'adresse secondaire pour un établissement situé à l'étranger"@fr ;
+    skos:definition "Cette variable désigne le code du pays de localisation de l'établissement pour les adresses à l'étranger.La variable codePaysEtrangerEtablissement commence toujours par 99 si elle est renseignée. Les 3 caractères suivants sont le code du pays étranger.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#codePaysEtranger2Etablissement
+
+sirene:codePaysEtranger2Etablissement a owl:ObjectProperty ;
+    rdfs:label "Code pays pour un établissement situé à l'étranger"@fr ;
+    skos:definition "Dans le cas où l'établissement dispose d'une entrée secondaire, cette variable désigne le code du pays de localisation de l'adresse secondaire de l'établissement pour les adresses à l'étranger.\n\nLa variable codePaysEtranger2Etablissement commence toujours par 99 si elle est renseignée. Les 3 caractères suivants sont le code du pays étranger.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#codePostalEtablissement
+
+sirene:codePostalEtablissement a owl:ObjectProperty ;
+    rdfs:label "Code postal"@fr ;
+    skos:definition "Cette variable désigne le code postal de l'adresse de l'établissement.\n\nPour les adresses à l'étranger (codeCommuneEtablissement commence par 99), cette variable est à null.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#codePostal2Etablissement
+
+sirene:codePostal2Etablissement a owl:ObjectProperty ;
+    rdfs:label "Code postal de l'adresse secondaire"@fr ;
+    skos:definition "Dans le cas où l'établissement dispose d'une entrée secondaire, cette variable désigne le code postal de l'adresse secondaire de l'établissement.\n\nPour les adresses à l'étranger (codeCommune2Etablissement commence par 99), cette variable est à null.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#complementAdresseEtablissement
+
+sirene:complementAdresseEtablissement a owl:ObjectProperty ;
+    rdfs:label "Complément d'adresse"@fr ;
+    skos:definition "Cette variable est un élément constitutif de l'adresse.\n\nC'est une variable facultative qui précise l'adresse avec :\n\n    une indication d'étage, d'appartement, de porte, de N° de boîte à lettres,\n    la désignation d'un bâtiment, d'un escalier, d'une entrée, d'un bloc,\n    le nom d'une résidence, d'un ensemble\n\nLongueur : 38"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#complementAdresse2Etablissement
+
+sirene:complementAdresse2Etablissement a owl:ObjectProperty ;
+    rdfs:label "Complément d'adresse secondaire"@fr ;
+    skos:definition "Dans le cas où l'établissement dispose d'une entrée secondaire, cette variable est un élément constitutif de l'adresse secondaire.\n\nC'est une variable facultative qui précise l'adresse secondaire avec :\n\n    une indication d'étage, d'appartement, de porte, de N° de boîte à lettres,\n    la désignation d'un bâtiment, d'un escalier, d'une entrée, d'un bloc,\n    le nom d'une résidence, d'un ensemble\n\nLongueur : 38"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#denominationUsuelleEtablissement
+
+sirene:denominationUsuelleEtablissement a owl:ObjectProperty ;
+    rdfs:label "Dénomination usuelle de l'établissement"@fr ;
+    skos:definition "Cette variable désigne le nom sous lequel l'établissement est connu du grand public.\n\nCet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008. Avant la norme 2008, la dénomination usuelle était enregistrée au niveau de l'unité légale sur trois champs (cf. variables denominationUsuelle1UniteLegale à denominationUsuelle3UniteLegale dans le descriptif des variables du fichier StockUniteLegale).\n\nCette variable est historisée.\n\nLongueur : 100"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#distributionSpecialeEtablissement
+
+sirene:distributionSpecialeEtablissement a owl:ObjectProperty ;
+    rdfs:label "Distribution spéciale de l'établissement"@fr ;
+    skos:definition "La distribution spéciale reprend les éléments particuliers qui accompagnent une adresse de distribution spéciale. C'est un élément constitutif de l'adresse.\n\nCette variable est facultative.\n\nLongueur : 26"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#distributionSpeciale2Etablissement
+
+sirene:distributionSpeciale2Etablissement a owl:ObjectProperty ;
+    rdfs:label "Distribution spéciale de l'adresse secondaire de l'établissement"@fr ;
+    skos:definition "Dans le cas où l'établissement dispose d'une entrée secondaire, la distribution spéciale reprend les éléments particuliers qui accompagnent l'adresse secondaire de distribution spéciale. C'est un élément constitutif de l'adresse secondaire.\n\nCette variable est facultative.\n\nLongueur : 26"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#etablissementSiege
+
+sirene:etablissementSiege a owl:ObjectProperty ;
+    rdfs:label "Qualité de siège ou non de l'établissement"@fr ;
+    skos:definition "C'est une variable booléenne qui indique si l'établissement est le siège ou non de l'unité légale.\n\nVariable calculée toujours renseignée.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#etatAdministratifEtablissement
+
+sirene:etatAdministratifEtablissement a owl:ObjectProperty ;
+    rdfs:label "État administratif de l'établissement"@fr ;
+    skos:definition "Lors de son inscription au répertoire, un établissement est, sauf exception, à l'état « Actif ». Le passage à l'état « Fermé » découle de la prise en compte d'une déclaration de fermeture.\n\nÀ noter qu'un établissement fermé peut être rouvert.\n\nEn règle générale, la première période d'historique d'un établissement correspond à un etatAdministratifUniteLegale égal à « Actif ». Toutefois, l'état administratif peut être à null (première date de début de l'état postérieure à la première date de début d'une autre variable historisée).\n\nLongueur : 1"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#indiceRepetitionEtablissement
+
+sirene:indiceRepetitionEtablissement a owl:ObjectProperty ;
+    rdfs:label "Indice de répétition dans la voie"@fr ;
+    skos:definition "Cette variable un élément constitutif de l'adresse.\n\nCette variable est facultative.\n\nElle doit être associée à la variable numeroVoieEtablissement.\n\nLongueur : 1"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#indiceRepetition2Etablissement
+
+sirene:indiceRepetition2Etablissement a owl:ObjectProperty ;
+    rdfs:label "Indice de répétition dans la voie pour l'adresse secondaire"@fr ;
+    skos:definition "Cette variable un élément constitutif de l'adresse secondaire.\n\nCette variable est facultative.\n\nElle doit être associée à la variable numeroVoie2Etablissement.\n\nLongueur : 1"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#nic
+
+sirene:nic a owl:ObjectProperty ;
+    rdfs:label "Numéro interne de classement de l'établissement"@fr ;
+    skos:definition "Le numéro interne de classement permet de distinguer les établissements d'une même entreprise. Il est composé de 5 chiffres. Associé au Siren, il forme le Siret de l'établissement. Il est composé de quatre chiffres et d'un cinquième qui permet de contrôler la validité du numéro Siret.\n\nLe Nic est attribué une seule fois au sein de l'entreprise. Si l'établissement ferme, son Nic ne peut être réattribué à un nouvel établissement.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#nombrePeriodesEtablissement
+
+sirene:nombrePeriodesEtablissement a owl:ObjectProperty ;
+    rdfs:label "Nombre de périodes de l'établissement"@fr ;
+    skos:definition "Cette variable donne le nombre de périodes [dateDebut,dateFin] de l'établissement. Chaque période correspond à l'intervalle de temps pendant lequel la totalité des variables historisées de l'établissement n'ont pas été modifiées.\n\nLes dates de ces périodes sont des dates d'effet (et non des dates de traitement).\n\nLongueur : 2"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#nomenclatureActivitePrincipaleEtablissement
+
+sirene:nomenclatureActivitePrincipaleEtablissement a owl:ObjectProperty ;
+    rdfs:label "Nomenclature d'activité de la variable activitePrincipaleEtablissement"@fr ;
+    skos:definition "Cette variable indique la nomenclature d'activité correspondant à la variable activitePrincipaleEtablissement\n\n(cf. ActivitePrincipaleEtablissement).\n\nLongueur : 8"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#statutDiffusionEtablissement
+
+sirene:statutDiffusionEtablissement a owl:ObjectProperty ;
+    rdfs:label "Statut de diffusion de l'établissement"@fr ;
+    skos:definition "Seuls les établissements diffusibles sont accessibles à tout public (statutDiffusionEtablissement=O).\n\nLongueur : 1"@fr ;
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
+
+###  http://sirene.eurecom.fr/ontology#transfertSiege
+
+sirene:transfertSiege a owl:ObjectProperty ;
+    rdfs:label "Indicatrice de transfert de siège"@fr ;
+    skos:definition "C'est une variable booléenne qui indique s'il s'agit d'un transfert de siège.\n\nIl peut s'agir d'un transfert de l'établissement ayant la qualité de siège, ou d'un transfert de la qualité de siège d'un établissement à un autre.\n\nLa variable prend la valeur true si le lien de succession concerne l'établissement siège, false si seulement des établissements secondaires sont concernés.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: .
+
+###  http://sirene.eurecom.fr/ontology#continuiteEconomique
+
+sirene:continuiteEconomique a owl:ObjectProperty ;
+    rdfs:label "Indicatrice de continuité économique entre les deux établissements"@fr ;
+    skos:definition "C'est une variable booléenne qui indique s'il y a continuité économique entre deux établissements ou non :\n\n    true s'il y a continuité économique,\n    false s'il n'y a pas continuité économique.\n\nNotion de continuité économique :\n\nIl y a continuité économique entre deux établissements qui se succèdent dès lors que deux des trois critères suivants sont vérifiés :\n\n    les deux établissements appartiennent à la même unité légale (même Siren) ;\n    les deux établissements exercent la même activité (même code APE) ;\n    les deux établissements sont situés dans un même lieu (numéro et libellé de voie, code commune).\n\nÀ noter : en cas de transfert de siège, la variable continuiteEconomique est toujours à true.\n\nLongueur : 5"@fr ;
+    rdfs:isDefinedBy sirene: .

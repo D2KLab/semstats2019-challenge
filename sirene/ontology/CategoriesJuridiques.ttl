@@ -1,0 +1,1527 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sirene.eurecom.fr/categorie-juridique/1000> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/10> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Entrepreneur individuel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2110> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/21> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Indivision entre personnes physiques"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2120> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/21> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Indivision avec personne morale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2210> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/22> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société créée de fait entre personnes physiques"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2220> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/22> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société créée de fait avec personne morale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2310> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/23> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en participation entre personnes physiques"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2320> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/23> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en participation avec personne morale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2385> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/23> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en participation de professions libérales"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2400> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/24> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Fiducie"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2700> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/27> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Paroisse hors zone concordataire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2900> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/29> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre groupement de droit privé non doté de la personnalité morale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/3110> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/31> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Représentation ou agence commerciale d'état ou organisme public étranger immatriculé au RCS"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/3120> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/31> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société commerciale étrangère immatriculée au RCS"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/3205> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/32> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Organisation internationale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/3210> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/32> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "État, collectivité ou établissement public étranger"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/3220> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/32> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société étrangère non immatriculée au RCS"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/3290> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/32> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre personne morale de droit étranger"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/4110> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/41> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public national à caractère industriel ou commercial doté d'un comptable public"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/4120> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/41> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public national à caractère industriel ou commercial non doté d'un comptable public"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/4130> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/41> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Exploitant public"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/4140> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/41> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public local à caractère industriel ou commercial"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/4150> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/41> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Régie d'une collectivité locale à caractère industriel ou commercial"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/4160> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/41> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Institution Banque de France"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5191> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/51> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société de caution mutuelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5192> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/51> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société coopérative de banque populaire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5193> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/51> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse de crédit maritime mutuel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5194> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/51> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse (fédérale) de crédit mutuel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5195> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/51> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association coopérative inscrite (droit local Alsace Moselle)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5196> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/51> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse d'épargne et de prévoyance à forme coopérative"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5202> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/52> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en nom collectif"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5203> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/52> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en nom collectif coopérative"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5306> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/53> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en commandite simple"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5307> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/53> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en commandite simple coopérative"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5308> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/53> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en commandite par actions"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5309> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/53> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en commandite par actions coopérative"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5370> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/53> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société de Participations Financières de Profession Libérale Société en commandite par actions (SPFPL SCA)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5385> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/53> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société d'exercice libéral en commandite par actions"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5410> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL nationale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5415> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL d'économie mixte"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5422> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL immobilière pour le commerce et l'industrie (SICOMI)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5426> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL immobilière de gestion"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5430> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL d'aménagement foncier et d'équipement rural (SAFER)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5431> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL mixte d'intérêt agricole (SMIA)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5432> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL d'intérêt collectif agricole (SICA)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5442> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL d'attribution"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5443> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL coopérative de construction"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5451> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL coopérative de consommation"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5453> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL coopérative artisanale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5454> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL coopérative d'intérêt maritime"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5455> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL coopérative de transport"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5458> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL coopérative ouvrière de production (SCOP)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5459> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL union de sociétés coopératives"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5460> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre SARL coopérative"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5470> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société de Participations Financières de Profession Libérale Société à responsabilité limitée (SPFPL SARL)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5485> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société d'exercice libéral à responsabilité limitée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5498> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SARL unipersonnelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5499> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/54> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société à responsabilité limitée (sans autre indication)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5505> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA à participation ouvrière à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5510> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA nationale à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5515> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA d'économie mixte à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5520> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Fonds à forme sociétale à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5522> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA immobilière pour le commerce et l'industrie (SICOMI) à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5525> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA immobilière d'investissement à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5530> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA d'aménagement foncier et d'équipement rural (SAFER) à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5531> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société anonyme mixte d'intérêt agricole (SMIA) à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5532> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA d'intérêt collectif agricole (SICA) à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5542> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA d'attribution à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5543> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de construction à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5546> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA de HLM à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5547> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de production de HLM à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5548> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA de crédit immobilier à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5551> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de consommation à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5552> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de commerçants-détaillants à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5553> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative artisanale à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5554> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative (d'intérêt) maritime à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5555> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de transport à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5558> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative ouvrière de production (SCOP) à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5559> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA union de sociétés coopératives à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5560> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre SA coopérative à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5570> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société de Participations Financières de Profession Libérale Société anonyme à conseil d'administration (SPFPL SA à conseil d'administration)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5585> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société d'exercice libéral à forme anonyme à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5599> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/55> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA à conseil d'administration (s.a.i.)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5605> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA à participation ouvrière à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5610> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA nationale à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5615> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA d'économie mixte à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5620> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Fonds à forme sociétale à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5622> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA immobilière pour le commerce et l'industrie (SICOMI) à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5625> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA immobilière d'investissement à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5630> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Safer anonyme à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5631> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA mixte d'intérêt agricole (SMIA)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5632> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA d'intérêt collectif agricole (SICA)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5642> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA d'attribution à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5643> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de construction à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5646> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA de HLM à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5647> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société coopérative de production de HLM anonyme à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5648> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA de crédit immobilier à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5651> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de consommation à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5652> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de commerçants-détaillants à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5653> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative artisanale à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5654> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative d'intérêt maritime à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5655> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative de transport à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5658> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA coopérative ouvrière de production (SCOP) à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5659> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA union de sociétés coopératives à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5660> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre SA coopérative à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5670> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société de Participations Financières de Profession Libérale Société anonyme à Directoire (SPFPL SA à directoire)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5685> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société d'exercice libéral à forme anonyme à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5699> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/56> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SA à directoire (s.a.i.)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5710> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/57> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SAS, société par actions simplifiée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5720> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/57> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société par actions simplifiée à associé unique ou société par actions simplifiée unipersonnelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5770> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/57> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société de Participations Financières de Profession Libérale Société par actions simplifiée (SPFPL SAS)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5785> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/57> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société d'exercice libéral par action simplifiée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5800> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/58> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société européenne"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6100> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/61> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse d'Épargne et de Prévoyance"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6210> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/62> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement européen d'intérêt économique (GEIE)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6220> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/62> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement d'intérêt économique (GIE)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6316> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/63> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Coopérative d'utilisation de matériel agricole en commun (CUMA)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6317> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/63> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société coopérative agricole"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6318> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/63> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Union de sociétés coopératives agricoles"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6411> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/64> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société d'assurance à forme mutuelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6511> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Sociétés Interprofessionnelles de Soins Ambulatoires "@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6521> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile de placement collectif immobilier (SCPI)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6532> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile d'intérêt collectif agricole (SICA)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6533> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement agricole d'exploitation en commun (GAEC)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6534> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement foncier agricole"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6535> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement agricole foncier"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6536> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement forestier"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6537> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement pastoral"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6538> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement foncier et rural"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6539> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile foncière"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6540> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile immobilière"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6541> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile immobilière de construction-vente"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6542> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile d'attribution"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6543> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile coopérative de construction"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6544> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile immobilière d' accession progressive à la propriété"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6551> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile coopérative de consommation"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6554> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile coopérative d'intérêt maritime"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6558> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile coopérative entre médecins"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6560> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre société civile coopérative"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6561> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP d'avocats"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6562> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP d'avocats aux conseils"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6563> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP d'avoués d'appel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6564> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP d'huissiers"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6565> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de notaires"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6566> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de commissaires-priseurs"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6567> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de greffiers de tribunal de commerce"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6568> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de conseils juridiques"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6569> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de commissaires aux comptes"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6571> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de médecins"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6572> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de dentistes"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6573> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP d'infirmiers"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6574> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de masseurs-kinésithérapeutes"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6575> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de directeurs de laboratoire d'analyse médicale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6576> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de vétérinaires"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6577> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP de géomètres experts"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6578> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "SCP d'architectes"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6585> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre société civile professionnelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6588> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile laitière"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6589> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile de moyens"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6595> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse locale de crédit mutuel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6596> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse de crédit agricole mutuel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6597> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile d'exploitation agricole"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6598> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Exploitation agricole à responsabilité limitée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6599> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/65> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre société civile"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6901> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/69> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre personne de droit privé inscrite au registre du commerce et des sociétés"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7111> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autorité constitutionnelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7112> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autorité administrative ou publique indépendante"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7113> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Ministère"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7120> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Service central d'un ministère"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7150> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Service du ministère de la Défense"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7160> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Service déconcentré à compétence nationale d'un ministère (hors Défense)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7171> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Service déconcentré de l'État à compétence (inter) régionale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7172> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Service déconcentré de l'État à compétence (inter) départementale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7179> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "(Autre) Service déconcentré de l'État à compétence territoriale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7190> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/71> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Ecole nationale non dotée de la personnalité morale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7210> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/72> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Commune et commune nouvelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7220> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/72> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Département"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7225> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/72> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Collectivité et territoire d'Outre Mer"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7229> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/72> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "(Autre) Collectivité territoriale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7230> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/72> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Région"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7312> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Commune associée et commune déléguée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7313> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Section de commune"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7314> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Ensemble urbain"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7321> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association syndicale autorisée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7322> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association foncière urbaine"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7323> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association foncière de remembrement"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7331> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public local d'enseignement"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7340> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Pôle métropolitain"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7341> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Secteur de commune"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7342> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "District urbain"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7343> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Communauté urbaine"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7344> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Métropole"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7345> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat intercommunal à vocation multiple (SIVOM)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7346> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Communauté de communes"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7347> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Communauté de villes"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7348> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Communauté d'agglomération"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7349> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre établissement public local de coopération non spécialisé ou entente"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7351> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Institution interdépartementale ou entente"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7352> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Institution interrégionale ou entente"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7353> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat intercommunal à vocation unique (SIVU)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7354> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat mixte fermé"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7355> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat mixte ouvert"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7356> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Commission syndicale pour la gestion des biens indivis des communes"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7357> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Pôle d'équilibre territorial et rural (PETR)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7361> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Centre communal d'action sociale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7362> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse des écoles"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7363> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse de crédit municipal"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7364> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement d'hospitalisation"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7365> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat inter hospitalier"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7366> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public local social et médico-social"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7367> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Centre Intercommunal d'action sociale (CIAS)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7371> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Office public d'habitation à loyer modéré (OPHLM)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7372> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Service départemental d'incendie et de secours (SDIS)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7373> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public local culturel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7378> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Régie d'une collectivité locale à caractère administratif"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7379> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "(Autre) Établissement public administratif local"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7381> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Organisme consulaire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7382> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public national ayant fonction d'administration centrale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7383> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public national à caractère scientifique culturel et professionnel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7384> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre établissement public national d'enseignement"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7385> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre établissement public national administratif à compétence territoriale limitée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7389> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/73> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public national à caractère administratif"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7410> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/74> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement d'intérêt public (GIP)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7430> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/74> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Établissement public des cultes d'Alsace-Lorraine"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7450> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/74> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Etablissement public administratif, cercle et foyer dans les armées "@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7470> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/74> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement de coopération sanitaire à gestion publique"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7490> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/74> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre personne morale de droit administratif"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8110> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/81> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Régime général de la Sécurité Sociale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8120> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/81> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Régime spécial de Sécurité Sociale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8130> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/81> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Institution de retraite complémentaire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8140> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/81> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Mutualité sociale agricole"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8150> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/81> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Régime maladie des non-salariés non agricoles"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8160> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/81> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Régime vieillesse ne dépendant pas du régime général de la Sécurité Sociale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8170> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/81> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Régime d'assurance chômage"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8190> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/81> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre régime de prévoyance sociale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8210> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/82> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Mutuelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8250> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/82> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Assurance mutuelle agricole"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8290> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/82> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre organisme mutualiste"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8310> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/83> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Comité central d'entreprise"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8311> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/83> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Comité d'établissement"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8410> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/84> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat de salariés"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8420> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/84> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat patronal"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8450> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/84> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Ordre professionnel ou assimilé"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8470> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/84> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Centre technique industriel ou comité professionnel du développement économique"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8490> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/84> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre organisme professionnel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8510> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/85> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Institution de prévoyance"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8520> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/85> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Institution de retraite supplémentaire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9110> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/91> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat de copropriété"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9150> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/91> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association syndicale libre"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9210> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association non déclarée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9220> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association déclarée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9221> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association déclarée d'insertion par l'économique"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9222> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association intermédiaire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9223> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement d'employeurs"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9224> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association d'avocats à responsabilité professionnelle individuelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9230> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association déclarée, reconnue d'utilité publique"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9240> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Congrégation"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9260> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/92> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association de droit local (Bas-Rhin, Haut-Rhin et Moselle)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9300> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/93> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Fondation"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9900> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/99> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre personne morale de droit privé"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9970> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/99> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement de coopération sanitaire à gestion privée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/1> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Entrepreneur individuel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/10> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/1> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Entrepreneur individuel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/24> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/2> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Fiducie"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/27> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/2> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Paroisse hors zone concordataire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/29> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/2> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre groupement de droit privé non doté de la personnalité morale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/4> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Personne morale de droit public soumise au droit commercial"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/58> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/5> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société européenne"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/61> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/6> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Caisse d'épargne et de prévoyance"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/64> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/6> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société d'assurance mutuelle"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/69> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/6> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre personne morale de droit privé inscrite au registre du commerce et des sociétés"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/93> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/9> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Fondation"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/21> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/2> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Indivision"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/22> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/2> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société créée de fait"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/3> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Personne morale de droit étranger"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/31> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/3> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Personne morale de droit étranger, immatriculée au RCS (registre du commerce et des sociétés)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/52> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/5> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en nom collectif"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/62> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/6> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement d'intérêt économique"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/83> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/8> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Comité d'entreprise"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/85> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/8> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Organisme de retraite à adhésion non obligatoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/91> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/9> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Syndicat de propriétaires"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/99> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/9> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre personne morale de droit privé"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/23> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/2> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en participation"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/63> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/6> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société coopérative agricole"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/82> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/8> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Organisme mutualiste"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/32> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/3> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Personne morale de droit étranger, non immatriculée au RCS"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/57> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/5> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société par actions simplifiée"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/7> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Personne morale et organisme soumis au droit administratif"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/9> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement de droit privé"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/72> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/7> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Collectivité territoriale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/74> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/7> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre personne morale de droit public administratif"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/8> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Organisme privé spécialisé"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/84> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/8> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Organisme professionnel"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/2> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Groupement de droit privé non doté de la personnalité morale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/41> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/4> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Etablissement public ou régie à caractère industriel ou commercial"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/51> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/5> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société coopérative commerciale particulière"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/53> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/5> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société en commandite"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/6> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Autre personne morale immatriculée au RCS"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/5> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société commerciale"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/81> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/8> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Organisme gérant un régime de protection sociale à adhésion obligatoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/92> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/9> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Association loi 1901 ou assimilé"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/71> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/7> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Administration de l'état"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/54> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/5> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société à responsabilité limitée (SARL)"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/55> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/5> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société anonyme à conseil d'administration"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/56> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/5> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société anonyme à directoire"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/73> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/7> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Etablissement public administratif"@fr .
+
+<http://sirene.eurecom.fr/categorie-juridique/65> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/6> ;
+    skos:inScheme <http://sirene.eurecom.fr/categorie-juridique/> ;
+    skos:prefLabel "Société civile"@fr .
+
