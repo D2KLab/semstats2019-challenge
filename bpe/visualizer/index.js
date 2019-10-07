@@ -58,7 +58,7 @@ function loadTypesLabels() {
     `);
 
     return new Promise((resolve, reject) => {
-        fetch('https://3cixty.eurecom.fr/repositories/semstats2019-bpe', {
+        fetch('//sirene.eurecom.fr/repositories/semstats2019', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -120,7 +120,7 @@ function getEntityData(uri) {
                         ?type skos:prefLabel ?typeNotationLabel .
                     }
                 }
-                SERVICE <https://3cixty.eurecom.fr/repositories/3cixty> {
+                SERVICE <https://kb.city-moove.fr/sparql> {
                     ?ent2 rdfs:label ?label .
                     ?ent2 geo:location/locn:geometry ?geo .
                     ?ent2 locationOnt:businessType ?businessType .
@@ -131,7 +131,7 @@ function getEntityData(uri) {
             }
         `);
 
-        fetch('https://3cixty.eurecom.fr/repositories/semstats2019-bpe', {
+        fetch('//sirene.eurecom.fr/repositories/semstats2019', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
