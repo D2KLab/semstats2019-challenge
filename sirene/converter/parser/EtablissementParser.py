@@ -139,8 +139,9 @@ def processFile(inputPath):
       parse_address(g, subj, row)
 
       # Link between legal unit and establishment
-      g.add( (URIRef(f'{baseURI}siren/{row.siren}'), ORG.hasRegisteredOrganization, subj) )
       g.add( (subj, ORG.siteOf, URIRef(f'{baseURI}siren/{row.siren}')) )
+      if row.etablissementSiege == "true":
+        g.add( (URIRef(f'{baseURI}siren/{row.siren}'), ORG.hasRegisteredOrganization, subj) )
 
       # SameAs link with entreprise.data.gouv.fr
       g.add( (subj, OWL.sameAs, URIRef(f'https://entreprise.data.gouv.fr/etablissement/{row.siret}')) )
@@ -157,10 +158,6 @@ def processFile(inputPath):
         'codeCommune2Etablissement',
         'codePaysEtrangerEtablissement',
         'codePaysEtranger2Etablissement',
-        'codePostalEtablissement',
-        'codePostal2Etablissement',
-        'complementAdresseEtablissement',
-        'complementAdresse2Etablissement',
         'denominationUsuelleEtablissement',
         'distributionSpecialeEtablissement',
         'distributionSpeciale2Etablissement',

@@ -42,7 +42,7 @@ def processFile(inputPath):
       subj = URIRef(f'{baseURI}siren/{row.siren}')
 
       # RDF type
-      g.add( (subj, RDF.type, ROV.FormalOrganization) )
+      g.add( (subj, RDF.type, ROV.RegisteredOrganization) )
       g.add( (subj, RDF.type, SIRENE.UniteJuridique) )
 
       # Properties related to both natural and legal persons
