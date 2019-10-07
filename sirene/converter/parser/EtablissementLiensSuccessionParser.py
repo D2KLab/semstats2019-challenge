@@ -1,4 +1,5 @@
 import csv
+import os
 from collections import namedtuple
 from rdflib import Graph, Literal, Namespace
 from rdflib.namespace import RDF, FOAF, DC, SKOS
@@ -27,13 +28,15 @@ def createGraph():
   g.bind('sirene', SIRENE)
   return g
 
-def writeGraph(g, fileIndex):
+def writeGraph(g, outputBaseName, fileIndex):
   outputPath = f'data/StockEtablissementLiensSuccession-{fileIndex}.ttl'
   g.serialize(destination=outputPath, format='turtle')
   print(f'Wrote {len(g)} triples to {outputPath}')
 
-def run():
-  with open('data/StockEtablissementLiensSuccession_utf8.csv') as csv_file:
+def processFile(inputPath):
+  outputBaseName = os.path.splitext(os.path.basename(inputPath))[0]
+
+  with open(inputPath) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     LienSuccession = namedtuple('LienSuccession', next(csv_reader))
     g = createGraph()
@@ -61,13 +64,16 @@ def run():
 
       i += 1
       if i % entitiesPerFile == 0:
-        writeGraph(g, fileIndex)
+        writeGraph(g, outputBaseName, fileIndex)
         fileIndex += 1
         g = createGraph()
 
     # Write remaining triples to graph
     if len(g) > 0:
-      writeGraph(g, fileIndex)
+      writeGraph(g, outputBaseName, fileIndex)
+
+def run():
+  processFile('data/StockEtablissementLiensSuccession_utf8.csv')
 
 if __name__ == '__main__':
-  run()
+  processFile('data/StockEtablissementLiensSuccession_utf8-extract.csv')
