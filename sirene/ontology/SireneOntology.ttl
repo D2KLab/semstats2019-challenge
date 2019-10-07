@@ -209,38 +209,6 @@ sirene:codePaysEtranger2Etablissement a owl:ObjectProperty ;
     rdfs:isDefinedBy sirene: ;
     rdfs:range sirene:UniteJuridique .
 
-###  http://sirene.eurecom.fr/ontology#codePostalEtablissement
-
-sirene:codePostalEtablissement a owl:ObjectProperty ;
-    rdfs:label "Code postal"@fr ;
-    skos:definition "Cette variable désigne le code postal de l'adresse de l'établissement.\n\nPour les adresses à l'étranger (codeCommuneEtablissement commence par 99), cette variable est à null.\n\nLongueur : 5"@fr ;
-    rdfs:isDefinedBy sirene: ;
-    rdfs:range sirene:UniteJuridique .
-
-###  http://sirene.eurecom.fr/ontology#codePostal2Etablissement
-
-sirene:codePostal2Etablissement a owl:ObjectProperty ;
-    rdfs:label "Code postal de l'adresse secondaire"@fr ;
-    skos:definition "Dans le cas où l'établissement dispose d'une entrée secondaire, cette variable désigne le code postal de l'adresse secondaire de l'établissement.\n\nPour les adresses à l'étranger (codeCommune2Etablissement commence par 99), cette variable est à null.\n\nLongueur : 5"@fr ;
-    rdfs:isDefinedBy sirene: ;
-    rdfs:range sirene:UniteJuridique .
-
-###  http://sirene.eurecom.fr/ontology#complementAdresseEtablissement
-
-sirene:complementAdresseEtablissement a owl:ObjectProperty ;
-    rdfs:label "Complément d'adresse"@fr ;
-    skos:definition "Cette variable est un élément constitutif de l'adresse.\n\nC'est une variable facultative qui précise l'adresse avec :\n\n    une indication d'étage, d'appartement, de porte, de N° de boîte à lettres,\n    la désignation d'un bâtiment, d'un escalier, d'une entrée, d'un bloc,\n    le nom d'une résidence, d'un ensemble\n\nLongueur : 38"@fr ;
-    rdfs:isDefinedBy sirene: ;
-    rdfs:range sirene:UniteJuridique .
-
-###  http://sirene.eurecom.fr/ontology#complementAdresse2Etablissement
-
-sirene:complementAdresse2Etablissement a owl:ObjectProperty ;
-    rdfs:label "Complément d'adresse secondaire"@fr ;
-    skos:definition "Dans le cas où l'établissement dispose d'une entrée secondaire, cette variable est un élément constitutif de l'adresse secondaire.\n\nC'est une variable facultative qui précise l'adresse secondaire avec :\n\n    une indication d'étage, d'appartement, de porte, de N° de boîte à lettres,\n    la désignation d'un bâtiment, d'un escalier, d'une entrée, d'un bloc,\n    le nom d'une résidence, d'un ensemble\n\nLongueur : 38"@fr ;
-    rdfs:isDefinedBy sirene: ;
-    rdfs:range sirene:UniteJuridique .
-
 ###  http://sirene.eurecom.fr/ontology#denominationUsuelleEtablissement
 
 sirene:denominationUsuelleEtablissement a owl:ObjectProperty ;
@@ -334,11 +302,13 @@ sirene:statutDiffusionEtablissement a owl:ObjectProperty ;
 sirene:transfertSiege a owl:ObjectProperty ;
     rdfs:label "Indicatrice de transfert de siège"@fr ;
     skos:definition "C'est une variable booléenne qui indique s'il s'agit d'un transfert de siège.\n\nIl peut s'agir d'un transfert de l'établissement ayant la qualité de siège, ou d'un transfert de la qualité de siège d'un établissement à un autre.\n\nLa variable prend la valeur true si le lien de succession concerne l'établissement siège, false si seulement des établissements secondaires sont concernés.\n\nLongueur : 5"@fr ;
-    rdfs:isDefinedBy sirene: .
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
 
 ###  http://sirene.eurecom.fr/ontology#continuiteEconomique
 
 sirene:continuiteEconomique a owl:ObjectProperty ;
     rdfs:label "Indicatrice de continuité économique entre les deux établissements"@fr ;
     skos:definition "C'est une variable booléenne qui indique s'il y a continuité économique entre deux établissements ou non :\n\n    true s'il y a continuité économique,\n    false s'il n'y a pas continuité économique.\n\nNotion de continuité économique :\n\nIl y a continuité économique entre deux établissements qui se succèdent dès lors que deux des trois critères suivants sont vérifiés :\n\n    les deux établissements appartiennent à la même unité légale (même Siren) ;\n    les deux établissements exercent la même activité (même code APE) ;\n    les deux établissements sont situés dans un même lieu (numéro et libellé de voie, code commune).\n\nÀ noter : en cas de transfert de siège, la variable continuiteEconomique est toujours à true.\n\nLongueur : 5"@fr ;
-    rdfs:isDefinedBy sirene: .
+    rdfs:isDefinedBy sirene: ;
+    rdfs:range sirene:UniteJuridique .
