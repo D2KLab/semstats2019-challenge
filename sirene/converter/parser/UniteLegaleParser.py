@@ -63,7 +63,7 @@ def processFile(inputPath):
       if row.siren:
         g.add( (subj, ROV.registration, Literal(row.siren)) )
       if row.trancheEffectifsUniteLegale:
-        g.add( (subj, SCHEMA.numberOfEmployees, Literal(row.trancheEffectifsUniteLegale)) )
+        g.add( (subj, SCHEMA.numberOfEmployees, URIRef(f'{baseURI}tranche-effectif/${row.trancheEffectifsUniteLegale}')) )
 
       # Properties related to legal persons
       if row.denominationUniteLegale:

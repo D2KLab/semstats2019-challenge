@@ -133,7 +133,7 @@ def processFile(inputPath):
       if row.siret:
         g.add( (subj, ROV.registration, Literal(row.siret)) )
       if row.trancheEffectifsEtablissement:
-        g.add( (subj, SCHEMA.numberOfEmployees, Literal(row.trancheEffectifsEtablissement)) )
+        g.add( (subj, SCHEMA.numberOfEmployees, URIRef(f'{baseURI}tranche-effectif/${row.trancheEffectifsEtablissement}')) )
 
       # Establishment address
       parse_address(g, subj, row)

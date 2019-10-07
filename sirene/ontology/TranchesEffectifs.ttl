@@ -1,0 +1,72 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sirene.eurecom.fr/tranche-effectif/NN> a skos:Concept ;
+    skos:broader <http://sirene.eurecom.fr/categorie-juridique/10> ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "Unités non employeuses"@fr ;
+    skos:definition "Unités non employeuses (pas de salarié au cours de l'année de référence et pas d'effectif au 31/12). Cette tranche peut contenir quelques effectifs inconnus" .
+
+<http://sirene.eurecom.fr/tranche-effectif/00> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "0 salarié"@fr ;
+    skos:definition "0 salarié (n'ayant pas d'effectif au 31/12 mais ayant employé des salariés au cours de l'année de référence)" .
+
+<http://sirene.eurecom.fr/tranche-effectif/01> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "1 ou 2 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/02> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "3 à 5 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/03> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "6 à 9 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/11> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "10 à 19 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/12> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "20 à 49 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/21> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "50 à 99 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/22> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "100 à 199 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/31> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "200 à 249 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/32> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "250 à 499 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/41> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "500 à 999 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/42> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "1 000 à 1 999 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/51> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "2 000 à 4 999 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/52> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "5 000 à 9 999 salariés"@fr .
+
+<http://sirene.eurecom.fr/tranche-effectif/53> a skos:Concept ;
+    skos:inScheme <http://sirene.eurecom.fr/tranche-effectif/> ;
+    skos:prefLabel "10 000 salariés et plus"@fr .

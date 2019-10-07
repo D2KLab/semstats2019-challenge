@@ -45,6 +45,14 @@ sirene:UniteJuridique a owl:Class ;
     dct:created "2019-10-01"^^xsd:date ;
     dct:modified "2019-10-01"^^xsd:date .
 
+###  http://sirene.eurecom.fr/tranche-effectif/
+
+<http://sirene.eurecom.fr/tranche-effectif/> a skos:ConceptScheme ;
+    rdfs:label "Tranches d'effectifs" @fr ;
+    rdfs:comment "La tranche d'effectif salarié est déterminée en fonction de l'effectif salarié pour l'entreprise (TEFEN) et pour chacun de ses établissements (TEFET)."@fr ;
+    dct:created "2019-10-01"^^xsd:date ;
+    dct:modified "2019-10-01"^^xsd:date .
+
 #################################################################
 #    Object Properties
 #################################################################
