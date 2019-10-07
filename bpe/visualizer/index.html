@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BPE - City Moove - Alignments Visualizer</title>
+
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.css' type='text/css' />
+
+        <style>
+            body { margin:0; padding:0; }
+            #map { position:absolute; top:0; bottom:0; width:100%; }
+
+            .mapboxgl-popup { max-width: 200px; }
+            .mapboxgl-popup-content { text-align: center; font-family: 'Open Sans', sans-serif; }
+
+            #sidebar { width: 200px; height: 100%; overflow-y: auto; position: absolute; z-index: 1; background-color: rgba(255,255,255,0.75); }
+            .legend { width: 100%; display: block; padding: 0.25em 0.5em}
+            .legend .icon { width: 12px; height: 12px; border: 1px solid black; margin-right: 8px; display: inline-block; border-radius: 100%; }
+        </style>
+    </head>
+    <body>
+        <div id="sidebar"></div>
+        <div id="map"></div>
+        <script src="config.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+output
+node_modules
+data
+!data/alignments-query.rq
+!data/categories-relations.ttl
