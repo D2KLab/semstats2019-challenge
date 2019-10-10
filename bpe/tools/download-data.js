@@ -74,16 +74,13 @@ function downloadPlaces() {
           }
           FILTER(BOUND(?businessType))
 
-          FILTER (geof:sfWithin(?geo, '''
-              <http://www.opengis.net/def/crs/OGC/1.3/CRS84>
-              Polygon ((
-                6.079861 42.982015,
-            6.079861 44.361051,
-            7.716938 44.361051,
-            7.716938 42.982015,
-            6.079861 42.982015
-              ))
-              '''^^geogis:wktLiteral))
+          FILTER(bif:st_intersects(bif:st_geomfromtext('''
+          POLYGON((6.079861 42.982015,
+                   6.079861 44.361051,
+                   7.716938 44.361051,
+                   7.716938 42.982015,
+                   6.079861 42.982015))
+          '''), ?geo))
       }
     `;
 
