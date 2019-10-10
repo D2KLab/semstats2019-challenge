@@ -50,9 +50,11 @@ function loadTypesLabels() {
         PREFIX ibpe: <http://rdf.insee.fr/def/bpe#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         SELECT DISTINCT ?notation ?label WHERE {
-            ?s a ibpe:TypeEquipement .
-            ?s skos:notation ?notation .
-            ?s skos:prefLabel ?label .
+            GRAPH <http://semstats.eurecom.fr/bpe/codelists> {
+                ?s a ibpe:TypeEquipement .
+                ?s skos:notation ?notation .
+                ?s skos:prefLabel ?label .
+            }
         }
         ORDER BY ASC(?notation)
     `);
@@ -151,7 +153,7 @@ function getEntityData(uri) {
     });
 }
 
-map.on('load', function () {
+map.once('styledata', function () {
     console.log('map loaded');
 
     let typesLabels = {};
