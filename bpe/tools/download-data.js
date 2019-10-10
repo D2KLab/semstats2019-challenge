@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const request = require("request");
-const zlib = require("zlib");
+const extract = require("extract-zip");
 
 function downloadBPE(dataType) {
   const filePath = path.join("data", `bpe2018-${dataType}.zip`);
@@ -10,7 +10,7 @@ function downloadBPE(dataType) {
     return Promise.resolve();
   }
 
-  return new Promise(resolve => {
+  return new Promise((resolve, reject) => {
     const url = `http://www.linked-open-statistics.org/semstats2019/data/bpe2018-${dataType}.zip`;
     console.log(`Downloading ${url} to ${filePath}...`);
 
@@ -18,16 +18,24 @@ function downloadBPE(dataType) {
     const writeStream = fs.createWriteStream(
       path.join(path.dirname(filePath), `${baseName}.zip`)
     );
-    const unzip = zlib.createGunzip();
 
-    request({
-      url,
-      method: "GET"
-    })
-      .pipe(unzip)
-      .pipe(writeStream);
-
-    writeStream.on("finish", resolve);
+    request(url).pipe(writeStream);
+    writeStream.on("error", err => {
+      reject(err);
+    });
+    writeStream.on("finish", () => {
+      extract(
+        filePath,
+        { dir: path.resolve(path.join(path.dirname(filePath), baseName)) },
+        err => {
+          if (err) {
+            reject(err);
+            return;
+          }
+          resolve();
+        }
+      );
+    });
   });
 }
 
