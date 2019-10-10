@@ -71,8 +71,6 @@ for (const file of files) {
 
       alignmentIndex += 1;
     });
-
-    alignmentIndex += 1;
   });
 }
 
