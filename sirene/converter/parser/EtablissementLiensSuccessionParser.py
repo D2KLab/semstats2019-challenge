@@ -35,6 +35,8 @@ def writeGraph(g, outputBaseName, fileIndex):
 
 def processFile(inputPath):
   outputBaseName = os.path.splitext(os.path.basename(inputPath))[0]
+  if not os.path.exists('output'):
+    os.makedirs('output')
 
   with open(inputPath) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -73,7 +75,7 @@ def processFile(inputPath):
       writeGraph(g, outputBaseName, fileIndex)
 
 def run():
-  processFile('data/StockEtablissementLiensSuccession_utf8.csv')
+  processFile('output/StockEtablissementLiensSuccession_utf8.csv')
 
 if __name__ == '__main__':
-  processFile('data/StockEtablissementLiensSuccession_utf8-extract.csv')
+  run()

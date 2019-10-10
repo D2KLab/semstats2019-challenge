@@ -1,5 +1,6 @@
 import csv
 import math
+import os
 from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDF, SKOS
 
@@ -41,7 +42,9 @@ def run():
       g += parseCategories(csv_file)
 
   # Write results to file
-  g.serialize(destination='data/CategoriesJuridiques.ttl', format='turtle')
+  if not os.path.exists('output'):
+    os.makedirs('output')
+  g.serialize(destination='output/CategoriesJuridiques.ttl', format='turtle')
 
 if __name__ == '__main__':
   run()

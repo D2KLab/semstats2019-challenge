@@ -24,7 +24,7 @@ def parse(stockFilesPath, wikidataFilePath):
           finalGraph.add( (subj, OWL.sameAs, URIRef(row[1])) )
 
     if len(finalGraph) > 0:
-      finalGraph.serialize(destination=os.path.join('data/wikidata', f'wikidata_{outputBaseName}.ttl'), format='nt')
+      finalGraph.serialize(destination=os.path.join('data/wikidata', f'wikidata_{outputBaseName}.nt'), format='nt')
 
 def run():
   if not os.path.exists('data/wikidata'):

@@ -110,6 +110,8 @@ def parse_address(g, subj, row):
 
 def processFile(inputPath):
   outputBaseName = os.path.splitext(os.path.basename(inputPath))[0]
+  if not os.path.exists('output'):
+    os.makedirs('output')
 
   with open(inputPath) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -176,13 +178,13 @@ def processFile(inputPath):
 
       i += 1
       if i % entitiesPerFile == 0:
-       g.serialize(destination=os.path.join('data', f'{outputBaseName}_{fileIndex}.ttl'), format='turtle')
+       g.serialize(destination=os.path.join('output', f'{outputBaseName}_{fileIndex}.ttl'), format='turtle')
        fileIndex += 1
        g = createGraph()
 
     # Write remaining triples to graph
     if len(g) > 0:
-      g.serialize(destination=os.path.join('data', f'{outputBaseName}_{fileIndex}.ttl'), format='turtle')
+      g.serialize(destination=os.path.join('output', f'{outputBaseName}_{fileIndex}.ttl'), format='turtle')
 
 def run():
   processFile('data/StockEtablissement_utf8.csv')
