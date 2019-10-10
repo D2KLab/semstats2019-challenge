@@ -1,7 +1,7 @@
 import csv
 import os
 from collections import namedtuple
-from rdflib import Graph, Literal, Namespace
+from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import RDF, FOAF, DC, SKOS
 
 ADMS = Namespace('http://www.w3.org/ns/adms#')
@@ -11,6 +11,8 @@ PROV = Namespace('http://www.w3.org/ns/prov#')
 ROV = Namespace('http://www.w3.org/ns/regorg#')
 SCHEMA = Namespace('http://www.schema.org/')
 SIRENE = Namespace('http://sirene.eurecom.fr/ontology#')
+
+baseURI = 'http://sirene.eurecom.fr/'
 
 entitiesPerFile = 1e5 # 100k
 
@@ -26,6 +28,7 @@ def createGraph():
   g.bind('rov', ROV)
   g.bind('schema', SCHEMA)
   g.bind('sirene', SIRENE)
+  g.bind('prov', PROV)
   return g
 
 def writeGraph(g, outputBaseName, fileIndex):
@@ -45,13 +48,13 @@ def processFile(inputPath):
     i = 0
     fileIndex = 1
     for row in map(LienSuccession._make, csv_reader):
-      subj = SIRENE[f'event/{row.siretEtablissementPredecesseur}-{row.siretEtablissementSuccesseur}']
+      subj = URIRef(f'{baseURI}event/{row.siretEtablissementPredecesseur}-{row.siretEtablissementSuccesseur}')
 
       # RDF type
       g.add( (subj, RDF.type, ORG.ChangeEvent) )
 
-      g.add( (subj, ORG.originalOrganization, Literal(row.siretEtablissementPredecesseur)) )
-      g.add( (subj, ORG.resultingOrganization, Literal(row.siretEtablissementSuccesseur)) )
+      g.add( (subj, ORG.originalOrganization, URIRef(f'{baseURI}siret/{row.siretEtablissementPredecesseur}')) )
+      g.add( (subj, ORG.resultingOrganization, URIRef(f'{baseURI}siret/{row.siretEtablissementSuccesseur}')) )
       g.add( (subj, PROV.startedAtTime, Literal(row.dateLienSuccession)) )
       g.add( (subj, PROV.endedAtTime, Literal(row.dateDernierTraitementLienSuccession)) )
 

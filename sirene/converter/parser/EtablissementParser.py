@@ -124,6 +124,7 @@ def processFile(inputPath):
 
       # RDF type
       g.add( (subj, RDF.type, ROV.RegisteredOrganization) )
+      g.add( (subj, RDF.type, ORG.Site) )
       g.add( (subj, RDF.type, SIRENE.UniteJuridique) )
 
       if row.dateCreationEtablissement:
@@ -135,13 +136,12 @@ def processFile(inputPath):
       if row.siret:
         g.add( (subj, ROV.registration, Literal(row.siret)) )
       if row.trancheEffectifsEtablissement:
-        g.add( (subj, SCHEMA.numberOfEmployees, URIRef(f'{baseURI}tranche-effectif/${row.trancheEffectifsEtablissement}')) )
+        g.add( (subj, SCHEMA.numberOfEmployees, URIRef(f'{baseURI}tranche-effectif/{row.trancheEffectifsEtablissement}')) )
 
       # Establishment address
       parse_address(g, subj, row)
 
       # Link between legal unit and establishment
-      g.add( (subj, ORG.siteOf, URIRef(f'{baseURI}siren/{row.siren}')) )
       if row.etablissementSiege == "true":
         g.add( (URIRef(f'{baseURI}siren/{row.siren}'), ORG.hasRegisteredOrganization, subj) )
 
